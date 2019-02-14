@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import 'node_modules/angular2-toaster/toaster';
+@import "~ngx-smart-modal/ngx-smart-modal";
+@import "app/app.component";
+
+$pomegranate: #E82C0C;
+$mine-shaft: #202020;
+$white: #ffffff;
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.game {
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &-footer {
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    border-top: 4px solid $pomegranate;
+    background: $mine-shaft;
+
+    &-content {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &-text {
+      color: $white;
+      font-size: 16px;
+      margin-left: 12px;
+      a {
+        color: $pomegranate;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.form {
+  &-input {
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border: 2px $mine-shaft solid;
+  }
+
+  &-button {
+    background-color: $pomegranate;
+    padding: 11px 22px 12px 22px;
+    border: none;
+    outline: none;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+

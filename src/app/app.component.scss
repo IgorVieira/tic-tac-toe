@@ -1,0 +1,55 @@
+$pomegranate: #E82C0C;
+$mine-shaft: #202020;
+$white: #ffffff;
+
+
+.app-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 120px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  background: $mine-shaft;
+  justify-content: center;
+
+  &-logo {
+    text-align: center;
+  }
+
+  &-items {
+    position: absolute;
+    text-align: left;
+    right: 40px;
+    top: 18px;
+    cursor: help;
+  }
+
+  &-item {
+    color: $white;
+    letter-spacing: 4px;
+    font-size: bold;
+    text-transform: uppercase;
+  }
+}
+
+.modal {
+  &-title {
+    border-bottom: 2px solid $pomegranate;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    width: 50%;
+    margin-left: 20px;
+  }
+
+  &-list li{
+    list-style-type: square;
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
