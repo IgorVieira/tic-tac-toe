@@ -1,0 +1,14 @@
+<div>
+  <h1>{{ playerName }}</h1>
+  <input class="form-input" [(ngModel)]="heroName" placeholder="name">
+  <button class="form-button" (click)="loadPlayer(heroName)">search</button>
+
+  <div *ngIf="player">
+    <img class="hero-img" src='{{player.thumbnail.path}}.{{player.thumbnail.extension}}'>
+    <div class="hero-text">{{ player.name }}</div>
+  </div>
+  <div *ngIf="!player">
+    <img class="hero-img" src='/assets/images/user-placeholder.png'>
+    <div class="hero-text">Choose!</div>
+  </div>
+</div>
