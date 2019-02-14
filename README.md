@@ -7,6 +7,9 @@
 ## Build Setup
 
 ``` bash
+## clone this repository
+https://github.com/IgorVieira/tic-tac-toe.git
+
 # install dependencies
 npm install
 
