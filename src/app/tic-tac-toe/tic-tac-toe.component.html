@@ -1,0 +1,76 @@
+<div>
+  <div class="principal" *ngIf="showStart && showMatch">
+    <button
+      class="form-button"
+      (click)="startGame()">
+      Start
+    </button>
+  </div>
+
+  <div *ngIf="showBoard">
+    <ul>
+      <li class="line-border-bottom line-border-right"
+      [ngClass]= "{
+        'put-x': showTagX(0, 0),
+        'put-o': showTagO(0, 0),
+        'victory-message': showVictory(0, 0) }"
+      (click)="playGame(0, 0)"></li>
+      <li class="line-border-bottom line-border-right"
+        [ngClass]= "{
+          'put-x': showTagX(0, 1),
+          'put-o': showTagO(0, 1),
+          'victory-message': showVictory(0, 1) }"
+        (click)="playGame(0, 1)"></li>
+      <li class="line-border-bottom"
+        [ngClass]= "{
+          'put-x': showTagX(0, 2),
+          'put-o': showTagO(0, 2),
+          'victory-message': showVictory(0, 2) }"
+        (click)="playGame(0, 2)"></li>
+      <li class="line-border-bottom line-border-right"
+        [ngClass]= "{
+          'put-x': showTagX(1, 0),
+          'put-o': showTagO(1, 0),
+          'victory-message': showVictory(1, 0) }"
+        (click)="playGame(1, 0)"></li>
+      <li class="line-border-bottom line-border-right"
+        [ngClass]= "{
+          'put-x': showTagX(1, 1),
+          'put-o': showTagO(1, 1),
+          'victory-message': showVictory(1, 1) }"
+        (click)="playGame(1, 1)"></li>
+      <li class="line-border-bottom"
+        [ngClass]= "{
+          'put-x': showTagX(1, 2),
+          'put-o': showTagO(1, 2),
+          'victory-message': showVictory(1, 2) }"
+        (click)="playGame(1, 2)"></li>
+      <li class="line-border-right"
+        [ngClass]= "{
+          'put-x': showTagX(2, 0),
+          'put-o': showTagO(2, 0),
+          'victory-message': showVictory(2, 0) }"
+        (click)="playGame(2, 0)"></li>
+      <li class="line-border-right"
+        [ngClass]= "{
+          'put-x': showTagX(2, 1),
+          'put-o': showTagO(2, 1),
+          'victory-message': showVictory(2, 1) }"
+        (click)="playGame(2, 1)"></li>
+      <li [ngClass]= "{
+          'put-x': showTagX(2, 2),
+          'put-o': showTagO(2, 2),
+          'victory-message': showVictory(2, 2) }"
+        (click)="playGame(2, 2)"></li>
+    </ul>
+  </div>
+
+  <div *ngIf="showFinal">
+    <button
+      class="form-button"
+      (click)="novoJogo()">
+      Restart
+    </button>
+  </div>
+
+</div>
